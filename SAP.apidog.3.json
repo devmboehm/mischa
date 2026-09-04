@@ -131,12 +131,7 @@
             {
               "name": "proactive-maintenance-srv",
               "id": 10476488,
-              "auth": {
-                "type": "bearer",
-                "bearer": {
-                  "token": "{{SRV_TOKEN}}"
-                }
-              },
+              "auth": {},
               "securityScheme": {},
               "parentId": 10453440,
               "serverId": "",
@@ -167,7 +162,49 @@
               ],
               "inheritPostProcessors": {},
               "inheritPreProcessors": {},
-              "items": []
+              "items": [
+                {
+                  "name": "proactive-maintenance-srv",
+                  "id": 10476518,
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                      "token": "{{SRV_TOKEN}}"
+                    }
+                  },
+                  "securityScheme": {},
+                  "parentId": 10476488,
+                  "serverId": "",
+                  "description": "",
+                  "identityPattern": {
+                    "httpApi": {
+                      "type": "inherit",
+                      "bodyType": "",
+                      "fields": []
+                    }
+                  },
+                  "shareSettings": {},
+                  "visibility": "INHERITED",
+                  "moduleId": 329002,
+                  "preProcessors": [
+                    {
+                      "id": "inheritProcessors",
+                      "type": "inheritProcessors",
+                      "data": {}
+                    }
+                  ],
+                  "postProcessors": [
+                    {
+                      "id": "inheritProcessors",
+                      "type": "inheritProcessors",
+                      "data": {}
+                    }
+                  ],
+                  "inheritPostProcessors": {},
+                  "inheritPreProcessors": {},
+                  "items": []
+                }
+              ]
             },
             {
               "name": "health",
@@ -830,9 +867,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291485,
-              "createdAt": "2026-09-04T15:09:32.000Z",
-              "updatedAt": "2026-09-04T15:09:32.000Z",
+              "id": 4291487,
+              "createdAt": "2026-09-04T15:10:58.000Z",
+              "updatedAt": "2026-09-04T15:10:58.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -847,9 +884,9 @@
           "code": "401",
           "responseExamples": [
             {
-              "id": 4291485,
-              "createdAt": "2026-09-04T15:09:32.000Z",
-              "updatedAt": "2026-09-04T15:09:32.000Z",
+              "id": 4291487,
+              "createdAt": "2026-09-04T15:10:58.000Z",
+              "updatedAt": "2026-09-04T15:10:58.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -897,9 +934,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291486,
-              "createdAt": "2026-09-04T15:09:32.000Z",
-              "updatedAt": "2026-09-04T15:09:32.000Z",
+              "id": 4291488,
+              "createdAt": "2026-09-04T15:10:58.000Z",
+              "updatedAt": "2026-09-04T15:10:58.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -914,9 +951,9 @@
           "code": "403",
           "responseExamples": [
             {
-              "id": 4291486,
-              "createdAt": "2026-09-04T15:09:32.000Z",
-              "updatedAt": "2026-09-04T15:09:32.000Z",
+              "id": 4291488,
+              "createdAt": "2026-09-04T15:10:58.000Z",
+              "updatedAt": "2026-09-04T15:10:58.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -1314,7 +1351,7 @@
                 "defaultEnable": true,
                 "enable": true
               },
-              "name": "Pre-Flight Check 2",
+              "name": "Pre-Flight Check",
               "number": 3
             },
             {
@@ -1865,7 +1902,7 @@
             }
           ],
           "id": 1886478,
-          "name": "Happy Path_test",
+          "name": "Happy Path",
           "tags": [],
           "options": {
             "environmentId": 6702557,
