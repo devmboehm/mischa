@@ -45,6 +45,7 @@
       {
         "id": "default",
         "name": "Default Server",
+        "importSourceServerId": "default",
         "moduleId": 329002
       }
     ],
@@ -96,12 +97,7 @@
         {
           "name": "proactive-maintenance-srv",
           "id": 10453440,
-          "auth": {
-            "type": "bearer",
-            "bearer": {
-              "token": "{{SRV_TOKEN}}"
-            }
-          },
+          "auth": {},
           "securityScheme": {},
           "parentId": 0,
           "serverId": "",
@@ -133,24 +129,66 @@
           "inheritPreProcessors": {},
           "items": [
             {
+              "name": "proactive-maintenance-srv",
+              "id": 10476488,
+              "auth": {
+                "type": "bearer",
+                "bearer": {
+                  "token": "{{SRV_TOKEN}}"
+                }
+              },
+              "securityScheme": {},
+              "parentId": 10453440,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 329002,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": []
+            },
+            {
               "name": "health",
               "api": {
                 "id": "43030965",
                 "method": "get",
                 "path": "/health",
                 "parameters": {
-                  "query": [],
                   "path": [],
+                  "query": [],
                   "cookie": [],
                   "header": [
                     {
                       "id": "m4IDvh8Yvq",
                       "name": "Accept",
                       "required": true,
+                      "enable": true,
                       "description": "",
                       "example": "application/json",
                       "type": "string",
-                      "enable": true
+                      "omitGeneratedExample": false
                     }
                   ]
                 },
@@ -204,16 +242,20 @@
                   {
                     "name": "Success",
                     "data": "{\n    \"status\": \"healthy\"\n}",
-                    "responseId": "117469215"
+                    "responseId": "117469215",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
                   }
                 ],
                 "requestBody": {
                   "type": "none",
                   "parameters": [],
-                  "required": true,
-                  "mediaType": "",
                   "examples": [],
-                  "oasExtensions": ""
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
                 },
                 "description": "",
                 "tags": [],
@@ -221,7 +263,7 @@
                 "serverId": "",
                 "operationId": "",
                 "sourceUrl": "",
-                "ordering": 10,
+                "ordering": 0,
                 "cases": [
                   {
                     "id": 57675363,
@@ -230,16 +272,19 @@
                     "name": "Success",
                     "responseId": "117469215",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": [
                         {
                           "id": "bktmLdK65g",
                           "relatedId": "m4IDvh8Yvq",
                           "relatedName": "Accept",
+                          "name": "Accept",
+                          "type": "string",
                           "value": "application/json",
                           "enable": true,
+                          "description": "",
                           "isDelete": false
                         }
                       ]
@@ -253,6 +298,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -298,7 +344,10 @@
                 "method": "get",
                 "path": "/api/v1/systems",
                 "parameters": {
-                  "path": []
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
                 },
                 "auth": {},
                 "securityScheme": {},
@@ -346,16 +395,20 @@
                   {
                     "name": "Example 1",
                     "data": "[\n    {\n        \"Type\": \"TEST\",\n        \"Sid\": \"CA1\",\n        \"Name\": \"CA1XSX\",\n        \"Number\": \"000000000500511057\"\n    },\n    {\n        \"Type\": \"TEST\",\n        \"Sid\": \"CD1\",\n        \"Name\": \"CD1XSX\",\n        \"Number\": \"000000000500512254\"\n    }\n]",
-                    "responseId": "166349696"
+                    "responseId": "166349696",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
                   }
                 ],
                 "requestBody": {
                   "type": "none",
                   "parameters": [],
-                  "required": true,
-                  "mediaType": "",
                   "examples": [],
-                  "oasExtensions": ""
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
                 },
                 "description": "",
                 "tags": [],
@@ -363,7 +416,7 @@
                 "serverId": "",
                 "operationId": "",
                 "sourceUrl": "",
-                "ordering": 20,
+                "ordering": 6,
                 "cases": [
                   {
                     "id": 57675860,
@@ -372,8 +425,8 @@
                     "name": "Success",
                     "responseId": "166349696",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -386,6 +439,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -411,8 +465,8 @@
                     "name": "Unauthorized",
                     "responseId": "3567416",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -425,6 +479,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -450,8 +505,8 @@
                     "name": "Forbidden",
                     "responseId": "3567426",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -464,6 +519,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -512,8 +568,10 @@
                 "method": "get",
                 "path": "/api/v1/systems/{{SYSTEM_NUMBER}}/mrc",
                 "parameters": {
+                  "path": [],
                   "query": [],
-                  "path": []
+                  "cookie": [],
+                  "header": []
                 },
                 "auth": {},
                 "securityScheme": {},
@@ -561,16 +619,20 @@
                   {
                     "name": "Success",
                     "data": "{\n    \"system\": {\n        \"system_number\": \"000000000500511057\",\n        \"submission_id\": \"1f59597287760430e3bccadb6a630d0d\",\n        \"client_submission_id\": null,\n        \"spc\": \"VNS\"\n    },\n    \"fields\": {\n        \"general_information\": {\n            \"report\": {},\n            \"mrc_delivery_info\": {},\n            \"system_identification\": {},\n            \"ignored_checks\": {}\n        },\n        \"checks\": {\n            \"GENERAL_SYSTEM_INFO\": {},\n            \"SYSTEM_CLIENT_INFO\": {},\n            \"LANGUAGE_VECTOR_INFO\": {},\n            \"CHECK_FOR_OPEN_WORKBENCH_REQUESTS\": {},\n            \"INACTIVE_OBJECT_INFO\": {},\n            \"ABORTED_DATA_DICTIONARY_TABLE_CONVERSIONS\": {},\n            \"TADIR_AND_SOFTWARE_COMPONENT_CONSISTENCY_CHECK\": {},\n            \"NOT_FINISHED_SILENT_DATA_MIGRATION_INFO\": null,\n            \"CHECK_FOR_OLD_ABORTED_UPDATE_TASKS\": {}\n        },\n        \"addons\": {},\n        \"maintenance_history\": {}\n    }\n}",
-                    "responseId": "103810386"
+                    "responseId": "103810386",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
                   }
                 ],
                 "requestBody": {
                   "type": "none",
                   "parameters": [],
-                  "required": true,
-                  "mediaType": "",
                   "examples": [],
-                  "oasExtensions": ""
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
                 },
                 "description": "",
                 "tags": [],
@@ -578,7 +640,7 @@
                 "serverId": "",
                 "operationId": "",
                 "sourceUrl": "",
-                "ordering": 36,
+                "ordering": 12,
                 "cases": [
                   {
                     "id": 57701806,
@@ -587,8 +649,8 @@
                     "name": "Success",
                     "responseId": "103810386",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -601,6 +663,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -626,8 +689,8 @@
                     "name": "Unauthorised",
                     "responseId": "3567416",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -640,6 +703,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -665,8 +729,8 @@
                     "name": "Forbidden",
                     "responseId": "3567426",
                     "parameters": {
-                      "query": [],
                       "path": [],
+                      "query": [],
                       "cookie": [],
                       "header": []
                     },
@@ -679,6 +743,7 @@
                     "requestBody": {
                       "parameters": [],
                       "data": "",
+                      "type": "none",
                       "generateMode": "normal"
                     },
                     "auth": {},
@@ -765,9 +830,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291330,
-              "createdAt": "2026-09-04T11:17:45.000Z",
-              "updatedAt": "2026-09-04T11:17:45.000Z",
+              "id": 4291485,
+              "createdAt": "2026-09-04T15:09:32.000Z",
+              "updatedAt": "2026-09-04T15:09:32.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -782,9 +847,9 @@
           "code": "401",
           "responseExamples": [
             {
-              "id": 4291330,
-              "createdAt": "2026-09-04T11:17:45.000Z",
-              "updatedAt": "2026-09-04T11:17:45.000Z",
+              "id": 4291485,
+              "createdAt": "2026-09-04T15:09:32.000Z",
+              "updatedAt": "2026-09-04T15:09:32.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -832,9 +897,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291342,
-              "createdAt": "2026-09-04T11:32:26.000Z",
-              "updatedAt": "2026-09-04T11:32:26.000Z",
+              "id": 4291486,
+              "createdAt": "2026-09-04T15:09:32.000Z",
+              "updatedAt": "2026-09-04T15:09:32.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -849,9 +914,9 @@
           "code": "403",
           "responseExamples": [
             {
-              "id": 4291342,
-              "createdAt": "2026-09-04T11:32:26.000Z",
-              "updatedAt": "2026-09-04T11:32:26.000Z",
+              "id": 4291486,
+              "createdAt": "2026-09-04T15:09:32.000Z",
+              "updatedAt": "2026-09-04T15:09:32.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -1249,7 +1314,7 @@
                 "defaultEnable": true,
                 "enable": true
               },
-              "name": "Pre-Flight Check",
+              "name": "Pre-Flight Check 2",
               "number": 3
             },
             {
@@ -1800,7 +1865,7 @@
             }
           ],
           "id": 1886478,
-          "name": "Happy Path 2",
+          "name": "Happy Path_test",
           "tags": [],
           "options": {
             "environmentId": 6702557,
