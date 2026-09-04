@@ -129,84 +129,6 @@
           "inheritPreProcessors": {},
           "items": [
             {
-              "name": "proactive-maintenance-srv",
-              "id": 10476488,
-              "auth": {},
-              "securityScheme": {},
-              "parentId": 10453440,
-              "serverId": "",
-              "description": "",
-              "identityPattern": {
-                "httpApi": {
-                  "type": "inherit",
-                  "bodyType": "",
-                  "fields": []
-                }
-              },
-              "shareSettings": {},
-              "visibility": "INHERITED",
-              "moduleId": 329002,
-              "preProcessors": [
-                {
-                  "id": "inheritProcessors",
-                  "type": "inheritProcessors",
-                  "data": {}
-                }
-              ],
-              "postProcessors": [
-                {
-                  "id": "inheritProcessors",
-                  "type": "inheritProcessors",
-                  "data": {}
-                }
-              ],
-              "inheritPostProcessors": {},
-              "inheritPreProcessors": {},
-              "items": [
-                {
-                  "name": "proactive-maintenance-srv",
-                  "id": 10476518,
-                  "auth": {
-                    "type": "bearer",
-                    "bearer": {
-                      "token": "{{SRV_TOKEN}}"
-                    }
-                  },
-                  "securityScheme": {},
-                  "parentId": 10476488,
-                  "serverId": "",
-                  "description": "",
-                  "identityPattern": {
-                    "httpApi": {
-                      "type": "inherit",
-                      "bodyType": "",
-                      "fields": []
-                    }
-                  },
-                  "shareSettings": {},
-                  "visibility": "INHERITED",
-                  "moduleId": 329002,
-                  "preProcessors": [
-                    {
-                      "id": "inheritProcessors",
-                      "type": "inheritProcessors",
-                      "data": {}
-                    }
-                  ],
-                  "postProcessors": [
-                    {
-                      "id": "inheritProcessors",
-                      "type": "inheritProcessors",
-                      "data": {}
-                    }
-                  ],
-                  "inheritPostProcessors": {},
-                  "inheritPreProcessors": {},
-                  "items": []
-                }
-              ]
-            },
-            {
               "name": "health",
               "api": {
                 "id": "43030965",
@@ -867,9 +789,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291487,
-              "createdAt": "2026-09-04T15:10:58.000Z",
-              "updatedAt": "2026-09-04T15:10:58.000Z",
+              "id": 4291495,
+              "createdAt": "2026-09-04T15:21:46.000Z",
+              "updatedAt": "2026-09-04T15:21:46.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -884,9 +806,9 @@
           "code": "401",
           "responseExamples": [
             {
-              "id": 4291487,
-              "createdAt": "2026-09-04T15:10:58.000Z",
-              "updatedAt": "2026-09-04T15:10:58.000Z",
+              "id": 4291495,
+              "createdAt": "2026-09-04T15:21:46.000Z",
+              "updatedAt": "2026-09-04T15:21:46.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -934,9 +856,9 @@
           "folderId": 0,
           "databaseResponseExamples": [
             {
-              "id": 4291488,
-              "createdAt": "2026-09-04T15:10:58.000Z",
-              "updatedAt": "2026-09-04T15:10:58.000Z",
+              "id": 4291496,
+              "createdAt": "2026-09-04T15:21:46.000Z",
+              "updatedAt": "2026-09-04T15:21:46.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -951,9 +873,9 @@
           "code": "403",
           "responseExamples": [
             {
-              "id": 4291488,
-              "createdAt": "2026-09-04T15:10:58.000Z",
-              "updatedAt": "2026-09-04T15:10:58.000Z",
+              "id": 4291496,
+              "createdAt": "2026-09-04T15:21:46.000Z",
+              "updatedAt": "2026-09-04T15:21:46.000Z",
               "deletedAt": null,
               "apiDetailId": 0,
               "name": "Example 1",
@@ -1917,7 +1839,7 @@
             "readGlobalCookie": false,
             "saveGlobalCookie": false
           },
-          "priority": 0,
+          "priority": 2,
           "ordering": 10,
           "description": "Validates standard API functionality under normal operating conditions with valid authentication and payload.",
           "preProcessors": [],
